@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doraemon Archive</title>
+    <style>
+        @font-face {
+            font-family: 'Doraefont';
+            src: url('font.ttf') format('truetype');
+        }
+        body {
+            background-color: #87CEEB;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .square {
+            position: relative;
+            width: calc(100vw - 60px);
+            height: calc(100vh - 60px);
+            background-color: white;
+            border-radius: 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .doraemon-1973 {
+            width: 125px;
+            height: 180px;
+            background-color: #e0e0e0;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.2s; /* Smooth transition */
+        }
+        .doraemon-1973:hover {
+            transform: scale(0.95); /* Slightly smaller on hover */
+        }
+        .doraemon-1973 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .doraemon-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(128, 128, 128, 0.6); /* Grey with 60% opacity */
+            text-align: center;
+            padding: 5px 0;
+            color: #fff;
+            font-size: 12px;
+            border-radius: 0 0 10px 10px; /* Rounded corners for bottom */
+        }
+        .ripple-effect {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            transform: scale(0);
+            animation: ripple-animation 0.6s linear;
+        }
+        @keyframes ripple-animation {
+            to {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+        footer {
+            margin-top: auto;
+            font-size: 14px;
+            color: grey;
+            text-align: center;
+        }
+        .credits {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="square">
+        <div class="doraemon-1973" onclick="openDoraemon1973()">
+          <img src="https://cdn.discordapp.com/attachments/1097452437276721203/1246987169244119050/fpUEcviOHumDfkl1z8rfovy9m3m.png?ex=665e62cd&is=665d114d&hm=e54c1bc3cfa2581658b6ec2bb58f4c74c152eb298fe5112bd34876055cf2a058&" alt="Doraemon 1973">
+            <div class="doraemon-text">Doraemon (1973)</div>
+            <div class="ripple-effect"></div>
+        </div>
+    </div>
+    <footer>
+        Made with love by piesimp (Discord) <a href="credits.html" class="credits">Credits</a>
+    </footer>
+
+    <script>
+        function createRipple(event) {
+            const ripple = document.createElement('div');
+            ripple.classList.add('ripple-effect');
+            ripple.style.top = event.clientY - event.target.getBoundingClientRect().top + 'px';
+            ripple.style.left = event.clientX - event.target.getBoundingClientRect().left + 'px';
+            event.target.appendChild(ripple);
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        }
+
+        function openDoraemon1973() {
+            window.location.href = 'doraemon-1973.html';
+        }
+    </script>
+</body>
+</html>
