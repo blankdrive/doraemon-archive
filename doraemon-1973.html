@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doraemon (1973)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
     <style>
         @font-face {
             font-family: 'Doraefont';
@@ -15,26 +16,101 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; /* Align text to the left */
             align-items: center;
             height: 100vh;
         }
-        footer {
-            margin-top: auto;
-            font-size: 14px;
-            color: grey;
-            text-align: center;
+        .square {
+            position: relative;
+            width: calc(100vw - 60px);
+            background-color: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-left: 20px; /* Add margin to the left for alignment */
         }
-        .credits {
-            text-decoration: underline;
-            cursor: pointer;
+        .doraemon-1973 {
+            width: 125px;
+            height: 180px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px; /* Space between image and text */
+        }
+        .doraemon-1973 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        h2 {
+            margin: 0;
+            font-size: 24px;
+            font-family: 'Madimi One', sans-serif; /* Use Madimi One font */
+            text-align: left; /* Align text to the left */
+        }
+        .overview {
+            font-size: 16px;
+            margin-top: 10px;
+            font-family: 'Madimi One', sans-serif; /* Use Madimi One font */
+            text-align: left; /* Align text to the left */
+            max-width: 600px; /* Restrict text width for better readability */
+        }
+        .season-heading {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 0 10px;
+            text-align: left; /* Align text to the left */
+        }
+        .episode-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: left; /* Align text to the left */
+        }
+        .episode-list-item {
+            font-size: 18px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <footer>
-        Made with love by piesimp (Discord) <a href="credits.html" class="credits">Credits</a>
-    </footer>
+    <div class="square">
+        <div class="doraemon-1973">
+            <img src="https://m.media-amazon.com/images/M/MV5BNTY4YzEzY2ItZjU1ZS00ODJmLTllZDctNGJmZDNjNDRiMDBlXkEyXkFqcGdeQXVyMjgzNDQyMjE@._V1_FMjpg_UX1000_.jpg" alt="Doraemon 1973">
+        </div>
+        <h2>Doraemon 1973</h2>
+        <div class="overview">
+            <h2>Overview:</h2>
+            <p>Nobita Nobi is so hapless that his 22nd-century descendants are still impoverished as a result of his 20th-century bumbling. In a bid to raise their social status, their servant, a robotic cat named Doraemon, decides to travel back in time and guide Nobita on the proper path to fortune. Unfortunately, Doraemon, a dysfunctional robot that the family acquired by accident (but chose to keep nonetheless), isn't much better off than Nobita. The robot leads Nobita on many adventures, and while Nobita's life certainly is more exciting with the robot cat from the future, it is questionable if it is, in fact, better in the way that Doraemon planned.</p>
+        </div>
+        <div class="season-heading">Season 1</div>
+        <ul class="episode-list">
+            <li class="episode-list-item">Episode 1 - The Apology Cricket Riot</li>
+            <li class="episode-list-item">Episode 2 - Nobita's Ancestor</li>
+            <li class="episode-list-item">Episode 3 - The Cupid Lovey-Dovey Strategy</li>
+            <li class="episode-list-item">Episode 4 - Get Rid of the Bully</li>
+            <li class="episode-list-item">Episode 5 - Papa and Mama's Wedding Anniversary</li>
+            <li class="episode-list-item">Episode 6 - The Lottery Jackpot Strategy</li>
+            <li class="episode-list-item">Episode 7 - Who Am I?</li>
+            <li class="episode-list-item">Episode 8 - The Mystery of the Ghost Mansion</li>
+            <li class="episode-list-item">Episode 9 - Nobita Brings in Rain</li>
+            <li class="episode-list-item">Episode 10 - Wishing on a Shooting Star</li>
+            <li class="episode-list-item">Episode 11 - Nobita's Grandma</li>
+            <li class="episode-list-item">Episode 12 - Men Should Fight with Strength</li>
+            <li class="episode-list-item">Episode 13 - The Talking Lipstick</li>
+            <li class="episode-list-item">Episode 14 - Let's Have a Date on the Milky Way</li>
+            <li class="episode-list-item">Episode 15 - The Smiling Soap</li>
+            <li class="episode-list-item">Episode 16 - It's Summer! Let's Ski</li>
+            <li class="episode-list-item">Episode 17 - Catch Your Own Shadow</li>
+            <li class="episode-list-item">Episode 18 - The Broken Internal Clock</li>
+            <li class="episode-list-item">Episode 19 - What's a Forget-me-not?</li>
+            <li class="episode-list-item">Episode 20 - The Always Diary</li>
+            <li class="episode-list-item">Episode 21 - The Weather Box</li>
+            <li class="episode-list-item">Episode 22 - Manga Artist Training</li>
+            <li class="episode-list-item">Episode 23 - The Flower Filled Riot</li>
+            <li class="episode-list-item">Episode 24 - Shizuka's Birthday</li>
+            <li class="episode-list-item">Episode 25 - The Great Lost Child Confusion Riot</li>
+            <li class="episode-list-item">Episode 26 - Goodbye Doraemon</li>
+        </ul>
+    </div>
 </body>
 </html>
